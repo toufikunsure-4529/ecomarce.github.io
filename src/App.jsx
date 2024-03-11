@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 import MyState from "./context/data/MyState";
 import Cart from "./pages/Cart/Cart";
 import Home from "./pages/Home/Home";
@@ -14,7 +14,7 @@ import ProductInfo from "./pages/productInfo/ProductInfo";
 import Login from "./pages/registration/Login";
 import Signup from "./pages/registration/Signup";
 
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -31,7 +31,6 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/addproduct" element={<AddProduct />} />
           <Route path="/updateproduct" element={<UpdateProduct />} />
-
           <Route path="/*" element={<NoPage />} />{" "}
           {/* path="/*" means page not found to this component show */}
         </Routes>
@@ -42,3 +41,21 @@ function App() {
 }
 
 export default App;
+
+export const ProtectedRoutes = ({ children }) => {
+  if (localStorage.setItem("user")) {
+    return children;
+  } else {
+    return <Navigate to="/login" />;
+  }
+};
+
+export const ProtectedRoutesForAdmin = ({ children }) => {
+  const admin = JSON.parse(localStorage.getItem("user"));
+  console.log(admin.user.email);
+  if (admin.user.email === "admin@gmail.com") {
+    return children;
+  } else {
+    return <Navigate to="/login" />;
+  }
+};
