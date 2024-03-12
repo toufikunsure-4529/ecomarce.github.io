@@ -7,17 +7,18 @@ export default function Footer() {
   const { toggleMode, mode } = context;
   return (
     <footer
-      className="text-gray-600 body-font bg-gray-300"
+      className="text-gray-200 body-font"
       style={{
         backgroundColor: mode === "dark" ? "rgb(46 49 55)" : "",
         color: mode === "dark" ? "white" : "",
+        background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 52%, rgba(0,212,255,1) 100%)'
       }}
     >
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap md:text-left text-center order-first">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2
-              className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
+              className="title-font font-medium text-gray-200 tracking-widest text-sm mb-3"
               style={{ color: mode === "dark" ? "white" : "" }}
             >
               CATEGORIES
@@ -25,7 +26,7 @@ export default function Footer() {
             <nav className="list-none mb-10">
               <li>
                 <a
-                  className="text-gray-600 hover:text-gray-800"
+                  className="text-gray-300 hover:text-gray-400"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
                   Home
@@ -33,7 +34,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  className="text-gray-600 hover:text-gray-800"
+                  className="text-gray-300 hover:text-gray-400"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
                   Order
@@ -41,7 +42,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  className="text-gray-600 hover:text-gray-800"
+                  className="text-gray-300 hover:text-gray-400"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
                   Local For Vocal
@@ -49,7 +50,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  className="text-gray-600 hover:text-gray-800"
+                  className="text-gray-300 hover:text-gray-400"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
                   Cart
@@ -59,7 +60,7 @@ export default function Footer() {
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2
-              className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 uppercase"
+              className="title-font font-medium text-gray-200 tracking-widest text-sm mb-3 uppercase"
               style={{ color: mode === "dark" ? "white" : "" }}
             >
               Customer Service
@@ -68,7 +69,7 @@ export default function Footer() {
               <li>
                 <Link
                   to={"/returnpolicy"}
-                  className="text-gray-600 hover:text-gray-800"
+                  className="text-gray-300 hover:text-gray-400"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
                   Return Policy
@@ -77,7 +78,7 @@ export default function Footer() {
               <li>
                 <Link
                   to={"/about"}
-                  className="text-gray-600 hover:text-gray-800"
+                  className="text-gray-300 hover:text-gray-400"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
                   About
@@ -86,7 +87,7 @@ export default function Footer() {
               <li>
                 <Link
                   to={"/contact"}
-                  className="text-gray-600 hover:text-gray-800"
+                  className="text-gray-300 hover:text-gray-400"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
                   Contact Us
@@ -97,7 +98,7 @@ export default function Footer() {
 
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2
-              className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"
+              className="title-font font-medium text-gray-200 tracking-widest text-sm mb-3"
               style={{ color: mode === "dark" ? "white" : "" }}
             >
               Services
@@ -106,7 +107,7 @@ export default function Footer() {
               <li>
                 <Link
                   to={"/privacypolicy"}
-                  className="text-gray-600 hover:text-gray-800"
+                  className="text-gray-300 hover:text-gray-400"
                   style={{ color: mode === "dark" ? "white" : "" }}
                 >
                   Privacy
@@ -114,47 +115,48 @@ export default function Footer() {
               </li>
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <img src="https://ecommerce-sk.vercel.app/pay.png" alt="" />
+          <div className="lg:w-1/4 md:w-1/2 w-full h-full px-7 py-7 rounded-full" style={{background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(223,17,98,1) 92%, rgba(223,17,98,1) 99%)',
+}}>
+            <img src="https://ecommerce-sk.vercel.app/pay.png" alt="" className="rounded-xl" />
           </div>
         </div>
       </div>
 
       <div
-        className="bg-gray-200"
         style={{
           backgroundColor: mode === "dark" ? "rgb(55 57 61)" : "",
           color: mode === "dark" ? "white" : "",
+          background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)'
         }}
       >
         <div className="container px-5 py-3 mx-auto flex items-center sm:flex-row flex-col">
           <Link to={"/"} className="flex">
             <div className="flex ">
               <h1
-                className=" text-2xl font-bold text-black  px-2 py-1 rounded"
-                style={{ color: mode === "dark" ? "white" : "" }}
+                className=" text-2xl font-bold px-2 py-1 rounded"
+                style={{ color: mode === "dark" ? "white" : ""}}
               >
-                E-Bharat
+                Silisoft Computer
               </h1>
             </div>
           </Link>
           <p
-            className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4"
+            className="text-sm text-gray-200 sm:ml-6 sm:mt-0 mt-4"
             style={{ color: mode === "dark" ? "white" : "" }}
           >
-            © 2023 E-bharat —
+            © 2024 Silisoft Computer Shop —
             <a
-              href="https://twitter.com/knyttneve"
+              href="https://twitter.com"
               rel="noopener noreferrer"
-              className="text-gray-600 ml-1"
+              className="text-gray-200 ml-1"
               target="_blank"
               style={{ color: mode === "dark" ? "white" : "" }}
             >
-              www.ebharat.com
+              www.silisoft.com
             </a>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-            <a className="text-gray-500">
+            <a className="text-black">
               <svg
                 fill="currentColor"
                 strokeLinecap="round"
@@ -166,7 +168,7 @@ export default function Footer() {
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
               </svg>
             </a>
-            <a className="ml-3 text-gray-500">
+            <a className="ml-3 text-black">
               <svg
                 fill="currentColor"
                 strokeLinecap="round"
@@ -178,7 +180,7 @@ export default function Footer() {
                 <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
               </svg>
             </a>
-            <a className="ml-3 text-gray-500">
+            <a className="ml-3 text-black">
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -192,7 +194,7 @@ export default function Footer() {
                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
               </svg>
             </a>
-            <a className="ml-3 text-gray-500">
+            <a className="ml-3 text-black">
               <svg
                 fill="currentColor"
                 stroke="currentColor"

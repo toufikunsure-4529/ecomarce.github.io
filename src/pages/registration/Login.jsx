@@ -29,8 +29,10 @@ function Login() {
         progress: undefined,
         theme: "colored",
       });
-      window.location.href = "/";
       setLoading(false);
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 1000);
     } catch (error) {
       toast.error("Sigin Failed", {
         position: "top-right",

@@ -37,6 +37,9 @@ function Signup() {
       await addDoc(userRef, user);
      
       toast.success("Signup Succesfully");
+      setTimeout(()=>{
+        window.location.href = "/login";
+      },1000)
       setName("");
       setEmail("");
       setPassword("");
