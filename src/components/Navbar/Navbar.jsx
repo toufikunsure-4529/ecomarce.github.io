@@ -19,7 +19,7 @@ export default function Navbar() {
     toast.success("Logout Successfully");
     setTimeout(() => {
       window.location.href = "/";
-    }, 2000);
+    }, 5000);
   };
 
   return (
